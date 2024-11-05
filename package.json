@@ -1,12 +1,12 @@
 {
-  "homepage": "http://Muhammed-fahad.github.io/portfolio",
+  "homepage": "https://Muhammed-fahad.github.io/portfolio",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "type": "module",
   "scripts": {
-    "predeploy":"npm run dev",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
