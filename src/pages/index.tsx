@@ -5,10 +5,11 @@ import { Button } from "@/components/ui/button";
 import {
   ChevronRight,
   Code2,
-  Frame,
-  SearchCheck,
   Eye,
-  MonitorSmartphone,
+  Brain,
+  Cloud,
+  BarChart,
+  Layers,
 } from "lucide-react";
 import { TriangleDownIcon } from "@radix-ui/react-icons";
 import Spline from "@splinetool/react-spline";
@@ -26,38 +27,39 @@ import {
 } from "@/components/ui/carousel";
 import VanillaTilt from "vanilla-tilt";
 import { motion } from "framer-motion";
+import { pipeline } from "stream";
 
 const aboutStats = [
-  { label: "Years of experience", value: "3+" },
+  { label: "Years of experience", value: "1+" },
   { label: "Technologies mastered", value: "5+" },
-  { label: "Companies worked with", value: "15+" },
+  { label: "Companies worked as Intern", value: "2" },
 ];
 
 const projects = [
   {
-    title: "Unqueue",
-    description: "E-commerce platform for selling digital products",
+    title: "Hand Gesture",
+    description: "Hand Gesture Presentation",
     image: "/assets/unqueue.webm",
-    href: "https://unqueue.shop/",
+    href: "https://www.linkedin.com/posts/muhammed-fahad-541890227_machinelearning-artificialintelligence-gesturecontrol-activity-7204857647211180032-p91-?utm_source=share&utm_medium=member_desktop",
   },
   {
-    title: "InfiniteVPS",
-    description: "High performance VPS hosting solution",
+    title: "Volume Control",
+    description: "Volume Control",
     image: "/assets/infinitevps.webm",
-    href: "#",
+    href: "https://www.linkedin.com/posts/muhammed-fahad-541890227_machinelearning-artificialintelligence-gesturecontrol-activity-7197206541513494528-vpBc?utm_source=share&utm_medium=member_desktop",
   },
   {
-    title: "TranslateBot",
-    description: "Powerful Multilingual Translation Bot for Discord",
+    title: "Image Recognition",
+    description: "Image Recognition",
     image: "/assets/translate_bot.webm",
-    href: "https://translatebot.app/",
+    href: "https://www.linkedin.com/posts/muhammed-fahad-541890227_machinelearning-deeplearning-artificialintelligence-activity-7199744610196230144-ihZO?utm_source=share&utm_medium=member_desktop",
   },
-  {
+  /*{
     title: "Wrona",
     description: "Robotics-focused technology company",
     image: "/assets/wrona.jpeg",
     href: "https://www.wrona.com/",
-  },
+  },*/
   {
     title: "This website",
     description: "My personal website",
@@ -74,22 +76,10 @@ const services = [
     icon: Code2,
   },
   {
-    service: "UX Design",
+    service: "Cloud Engineering",
     description:
-      "Building intuitive, user-centric designs that drive engagement and conversion.",
-    icon: Frame,
-  },
-  {
-    service: "SEO Optimization",
-    description:
-      "Enhancing your website's visibility in search engines for increased organic traffic.",
-    icon: SearchCheck,
-  },
-  {
-    service: "Responsive Design",
-    description:
-      "Designing websites that look and perform equally well on all devices and screen sizes.",
-    icon: MonitorSmartphone,
+      "Designing and deploying scalable cloud infrastructure solutions to enhance performance",
+    icon: Cloud ,
   },
   {
     service: "Backend Development",
@@ -97,6 +87,27 @@ const services = [
       "Developing robust, scalable server-side logic for a wide range of web applications.",
     icon: Eye,
   },
+
+  {
+    service: "Machine Learning",
+    description:
+      "Designing and implementing ML algorithms to solve complex problems and Automate tasks. ",
+    icon: Brain, 
+  },
+  {
+    service: "Data Analysis",
+    description:
+      "Applying analytical tools to uncover insights and drive data-informed decisions.",
+    icon: BarChart ,
+  }, 
+
+  {
+    service: "Containerization & Orchestration",
+    description:
+      "Using Docker and Kubernetes to deploy and manage containerized applications.",
+    icon: Layers ,
+  }
+
 ];
 
 export default function Home() {
@@ -206,7 +217,7 @@ export default function Home() {
                   <br />
                 </span>
                 <span className="clash-grotesk text-gradient text-6xl 2xl:text-8xl">
-                  WendoJ.
+                  Fahad.
                 </span>
               </h1>
               <p
@@ -215,7 +226,7 @@ export default function Home() {
                 data-scroll-speed=".06"
                 className="mt-1 max-w-lg tracking-tight text-muted-foreground 2xl:text-xl"
               >
-                An experienced full-stack website developer with a passion for
+                An Full-stack website developer with a passion for
                 crafting unique digital experiences.
               </p>
             </div>
@@ -225,7 +236,7 @@ export default function Home() {
               data-scroll-speed=".06"
               className="flex flex-row items-center space-x-1.5 pt-6"
             >
-              <Link href="mailto:wendoj@proton.me" passHref>
+              <Link href="mailto:fahadsheikimam@gmail.com" passHref>
                 <Button>
                   Get in touch <ChevronRight className="ml-1 h-4 w-4" />
                 </Button>
@@ -269,19 +280,11 @@ export default function Home() {
             className="my-14 flex max-w-6xl flex-col justify-start space-y-10"
           >
             <h2 className="py-16  pb-2 text-3xl font-light leading-normal tracking-tighter text-foreground xl:text-[40px]">
-              I&apos;m an experienced full-stack developer proficient in{" "}
-              <Link
-                href="https://create.t3.gg/"
-                target="_blank"
-                className="underline"
-              >
-                TypeScript, Tailwind, and Next.js
-              </Link>{" "}
-              since 2021. My experience spans from startups to mid-sized
-              companies, where I&apos;ve been instrumental in the entire product
-              design process; from ideation and wireframing, through
-              prototyping, to the delivery of the final product, all while
-              efficiently collaborating with cross-functional teams.
+              Driven Computer Science Engineer specializing in DevOps and AI, 
+              with a strong foundation in software development, cloud technologies, and automation. 
+              Equipped with advanced problem-solving skills and expertise in various programming languages and frameworks, 
+              I am dedicated to building high-quality, scalable tech solutions while continually 
+              expanding my knowledge to stay at the forefront of the industry
             </h2>
             <div className="grid grid-cols-2 gap-8 xl:grid-cols-3">
               {aboutStats.map((stat) => (
@@ -446,7 +449,7 @@ export default function Home() {
               I&apos;m currently available for freelance work and open to
               discussing new projects.
             </p>
-            <Link href="mailto:wendoj@proton.me" passHref>
+            <Link href="mailto:fahadsheikimam@gmail.com" passHref>
               <Button className="mt-6">Get in touch</Button>
             </Link>
           </div>
